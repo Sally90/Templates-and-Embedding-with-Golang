@@ -1,0 +1,24 @@
+{{template "top" .}}
+
+<h1> Hello World! </h1>
+
+<p>{{.Entries}}</p>
+
+<ul>{{range .Words}}<li>{{.}}</li>{{end}}</ul>
+
+<table>
+  <tr>
+    <th>Word</th>
+    <th>Translation</th>
+    <th>Example</th>
+  </tr>
+    {{range .Vocabs}}
+    <tr>
+        <td>{{.Word}}</td>
+        <td>{{.Translation}}</td>
+        <td>{{.Example}}</td>
+    </tr>
+    {{end}}
+</table>
+
+{{template "bottom" .}}
